@@ -15,7 +15,7 @@ module xgriscv_pipeline(input clk, input reset,output[31:0] pc);
 	wire R_en;
 	wire [2:0]RW_type;
 	
-	imem instr_memory_inst (
+	imem U_imem (
     .addr(pc), 
     .instr(instr)
     );

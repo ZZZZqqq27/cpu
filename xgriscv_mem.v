@@ -1,7 +1,7 @@
 `include "define.v"
 `include "xgriscv_defines.v"
 
-module U_imem(input  [`ADDR_SIZE-1:0]   a,
+module imem(input  [`ADDR_SIZE-1:0]   a,
             output [`INSTR_SIZE-1:0]  rd);
 
   reg  [`INSTR_SIZE-1:0] RAM[`IMEM_SIZE-1:0];
