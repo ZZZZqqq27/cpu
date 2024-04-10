@@ -135,7 +135,7 @@ module datapath(
     .cout()
     );
 	
-/pc+imme
+//pc+imme
 	cla_adder32 pc_adder_imme (
     .A(pc_out), 
     .B(imme), 
@@ -145,7 +145,7 @@ module datapath(
     );
 	
 
-/pc_sel
+//pc_sel
 	mux pc_mux (
     .data1(pc_jump), 
     .data2(pc_order), 
