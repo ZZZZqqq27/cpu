@@ -32,9 +32,6 @@ module datapath(
 	
 	
 	
-	
-	
-	
 	wire [4:0]Rs1;
 	wire [4:0]Rs2;
 	wire [4:0]Rd;

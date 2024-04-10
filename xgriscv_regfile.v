@@ -1,7 +1,7 @@
 `include "define.v"
 `include "xgriscv_defines.v"
 
-module regfile(
+module registers(
   input                      	clk,
   input  [`RFIDX_WIDTH-1:0]  	ra1, ra2,
   output [`XLEN-1:0]          rd1, rd2,
