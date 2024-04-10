@@ -162,7 +162,7 @@ module datapath(
 
 	
 	
-ALUdata_sel	
+//ALUdata_sel	
 	mux ALU_data_mux (
     .data1(imme), 
     .data2(Rd_data2), 
@@ -171,7 +171,7 @@ ALUdata_sel
     );
 	
 	
-/ALU_result or datamem	
+//ALU_result or datamem	
 	mux WB_data_mux (
     .data1(Rd_mem_data), 
     .data2(ALU_result), 
@@ -180,7 +180,7 @@ ALUdata_sel
     );
 	
 	
-Wr_data_sel
+//Wr_data_sel
 	mux jalr_mux (
     .data1(pc_order), 
     .data2(WB_data), 
