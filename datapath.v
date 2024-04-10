@@ -1,3 +1,5 @@
+`include "mux.v"
+`include "adder32.v"
 module datapath(
 	input 	clk,
 	input   rst_n,
