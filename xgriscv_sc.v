@@ -6,7 +6,7 @@ module xgriscv_sc(input clk, input reset,output[31:0] pc);
 
  
 	
-    wire [31:0]pc;
+   // wire [31:0]pc;
 	wire [31:0]ram_addr;
 	wire [31:0]instr;
 	wire [31:0]Rd_mem_data;
