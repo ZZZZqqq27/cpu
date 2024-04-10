@@ -34,9 +34,9 @@ module dmem(clk,
 	output [31:0]dout;
 
 
-	reg [31:0]ram[255:0];//这里  
+	reg [31:0]ram[1023:0];//这里  
 	
-	wire [31:0]Rd_data;reference
+	wire [31:0]Rd_data;//reference
 	
 //
 	
@@ -47,7 +47,7 @@ module dmem(clk,
 	wire [31:0]Wr_data;
 	
 	
-	assign Rd_data=ram[addr[31:2]];/读基准
+	assign Rd_data=ram[addr[31:2]];//读基准
 
 always@(*)
 	begin
@@ -67,7 +67,7 @@ assign Wr_data=(RW_type[1:0]==2'b00) ? Wr_data_B :( (RW_type[1:0]==2'b01) ? Wr_d
 
 ///上升沿写入数捿
   always @(posedge clk)
-    if (we)
+    if (W_en)
       begin
         RAM[a[11:2]] <= wd;          	  // sw
         // DO NOT CHANGE THIS display LINE!!!

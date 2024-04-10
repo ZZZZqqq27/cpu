@@ -69,16 +69,16 @@ module main_control(
 	assign RW_type=func3;
 	
 	
-	enable
+	//enable
 	assign MemRead= load;
 	assign MemWrite= store;
 	assign RegWrite= jal| jalr | load | I_type |R_type | U_type;
 	
-	MUX
+	//MUX
 	assign ALUSrc=load | store |I_type | jalr;  //select imme
 	assign MemtoReg= load;  //select datamemory data
 	
-	ALUop
+	//ALUop
 	assign ALUop[1]= R_type|branch; //R 10 I 01 B 11 add 00
 	assign ALUop[0]= I_type|branch;
 	

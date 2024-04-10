@@ -1,3 +1,4 @@
+`include "define.v"
 module alu_control(
 	ALUop,
 	func3,
