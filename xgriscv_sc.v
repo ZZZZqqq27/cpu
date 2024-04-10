@@ -1,9 +1,9 @@
 `include "define.v"
 `include "xgriscv_defines.v"
-module xgriscv_sc(input clk, input reset,output[31:0] pc);
+module xgriscv_pipeline(input clk, input reset,output[31:0] pc);
 
    
-
+//fff
  
 	
    // wire [31:0]pc;
