@@ -69,7 +69,7 @@ assign Wr_data=(RW_type[1:0]==2'b00) ? Wr_data_B :( (RW_type[1:0]==2'b01) ? Wr_d
   always @(posedge clk)
     if (W_en)
       begin
-        RAM[a[11:2]] <= wd;          	  // sw
+        ram[a[11:2]] <= wd;          	  // sw
         // DO NOT CHANGE THIS display LINE!!!
         // 不要修改下面这行display语句！！！
         // 对于所有的store指令，都输出位于写入目标地址四字节对齐处的32位数据，不需要修改下面的display语句
@@ -108,7 +108,7 @@ assign Rd_data_B_ext=(RW_type[2]) ? {24'd0,Rd_data_B} : {{24{Rd_data_B[7]}},Rd_d
 assign Rd_data_H_ext=(RW_type[2]) ? {16'd0,Rd_data_H} : {{16{Rd_data_H[15]}},Rd_data_H};
 
 
-/
+//
 assign dout=(RW_type[1:0]==2'b00) ? Rd_data_B_ext : ((RW_type[1:0]==2'b01) ? Rd_data_H_ext : Rd_data );
 
 
