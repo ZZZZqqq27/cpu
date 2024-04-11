@@ -45,6 +45,7 @@ module xgriscv_pipeline(input clk, input reset,output[31:0] pc);
     .RW_type(RW_type), 
     .din(Wr_mem_data), 
     .dout(Rd_mem_data)
+    .pc(pc)
     );	
 
   

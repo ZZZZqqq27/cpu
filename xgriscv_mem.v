@@ -17,9 +17,10 @@ module dmem(clk,
 	addr,
 	RW_type,
 	din,
-	dout
-    );
+	dout,pc
 	
+    );
+	input pc;
 	
 	input clk;
 	input rst_n;
@@ -74,7 +75,7 @@ assign Wr_data=(RW_type[1:0]==2'b00) ? Wr_data_B :( (RW_type[1:0]==2'b01) ? Wr_d
         // 不要修改下面这行display语句！！！
         // 对于所有的store指令，都输出位于写入目标地址四字节对齐处的32位数据，不需要修改下面的display语句
         /**********************************************************************/
-        $display("pc = %h: dataaddr = %h, memdata = %h", pc, {a[31:2],2'b00}, RAM[a[11:2]]);
+        $display("pc = %h: dataaddr = %h, memdata = %h", pc, {addr[31:2],2'b00}, RAM[addr[11:2]]);
         /**********************************************************************/
   	  end
 
