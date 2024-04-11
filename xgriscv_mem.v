@@ -34,7 +34,7 @@ module dmem(clk,
 	output [31:0]dout;
 
 
-	reg [31:0]ram[1023:0];//这里  
+	reg [31:0]RAM[1023:0];//这里  
 	
 	wire [31:0]Rd_data;//reference
 	
@@ -47,7 +47,7 @@ module dmem(clk,
 	wire [31:0]Wr_data;
 	
 	
-	assign Rd_data=ram[addr[31:2]];//读基准
+	assign Rd_data=RAM[addr[31:2]];//读基准
 
 always@(*)
 	begin
@@ -69,7 +69,7 @@ assign Wr_data=(RW_type[1:0]==2'b00) ? Wr_data_B :( (RW_type[1:0]==2'b01) ? Wr_d
   always @(posedge clk)
     if (W_en)
       begin
-        ram[addr[11:2]] <= Wr_data;          	  // sw
+        RAM[addr[11:2]] <= Wr_data;          	  // sw
         // DO NOT CHANGE THIS display LINE!!!
         // 不要修改下面这行display语句！！！
         // 对于所有的store指令，都输出位于写入目标地址四字节对齐处的32位数据，不需要修改下面的display语句
