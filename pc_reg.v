@@ -13,7 +13,7 @@ module pc_reg(
 	
 	always@(posedge clk or negedge rst_n)
 	begin
-		if(!rst_n)
+		if(rst_n)
 			pc_out<=`zero_word;
 		else
 			pc_out<=pc_new;
