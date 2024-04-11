@@ -4,7 +4,7 @@
 module imem(input  [`ADDR_SIZE-1:0]   a,
             output [`INSTR_SIZE-1:0]  rd);
 
-  reg  [`INSTR_SIZE-1:0] RAM[`IMEM_SIZE-1:0];
+  reg  [`INSTR_SIZE-1:0] RAM[`IMEM_SIZE-1:0];//INSTR_SIZE :32 IMEM_SIZE:1024
 
   assign rd = RAM[a[11:2]]; // instruction size aligned
 endmodule
