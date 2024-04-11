@@ -22,7 +22,7 @@ module datapath(
 	input   [3:0]ALUctl,
 	
 	input [31:0]Rd_mem_data,
-	output  [7:0]rom_addr,
+	output  [31:0]rom_addr,
 	output [31:0]Wr_mem_data,
 	output [31:0]ALU_result,
 	output [6:0]opcode,
@@ -65,7 +65,7 @@ module datapath(
 	
 	assign reg_sel=jal | jalr ;
 	assign Wr_mem_data=Rd_data2;
-	assign rom_addr=pc_out[9:2];
+	assign rom_addr=pc_out;
 	assign pc_jalr={ALU_result[31:1],1'b0};
 	
 	pc_reg pc_reg_inst (

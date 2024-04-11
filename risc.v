@@ -4,7 +4,7 @@ module riscv(
 	input [31:0]instr,
 	input [31:0]Rd_mem_data,
 	
-	output [7:0]rom_addr,
+	output [31:0]rom_addr,
 	
 	output [31:0]Wr_mem_data,
 	output W_en,

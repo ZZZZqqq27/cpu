@@ -1,12 +1,12 @@
 `include "define.v"
 `include "xgriscv_defines.v"
 
-module imem(input  [`ADDR_SIZE-1:0]   a,
-            output [`INSTR_SIZE-1:0]  rd);
+module imem(input  [`ADDR_SIZE-1:0]   addr,//32
+            output [`INSTR_SIZE-1:0]  instr);//32
 
-  reg  [`INSTR_SIZE-1:0] RAM[`IMEM_SIZE-1:0];//INSTR_SIZE :32 IMEM_SIZE:1024
+  reg  [`INSTR_SIZE-1:0] RAM[`IMEM_SIZE-1:0];//INSTR_SIZE :32 IMEM_SIZE:1024,10位
 
-  assign rd = RAM[a[11:2]]; // instruction size aligned
+  assign instr = RAM[addr[11:2]]; // instruction size aligned
 endmodule
 
 
