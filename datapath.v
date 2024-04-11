@@ -89,14 +89,13 @@ module datapath(
 	
     registers registers_inst (
     .clk(clk), 
-   
     .ra1(Rs1), 
     .ra2(Rs2), 
      .rd1(Rd_data1), 
     .rd2(Rd_data2)
      .we3(RegWrite), 
     .wa3(Rd), 
-    .wd3(Wr_reg_data), 
+    .wd3(Wr_reg_data)
    
     );
 
